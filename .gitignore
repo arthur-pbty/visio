@@ -30,6 +30,14 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# editor / local tooling
+.vscode/
+
+# local database artifacts
+*.db
+*.db-shm
+*.db-wal
+
 # env files (can opt-in for committing if needed)
 .env*
 

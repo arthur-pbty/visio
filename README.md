@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Visio - Visioconference WebRTC
 
-## Getting Started
+Visio est une application de visioconference simple, rapide et sans inscription.
+Le projet est construit avec Next.js, React et WebRTC pour offrir des appels peer-to-peer.
 
-First, run the development server:
+## Site en production
+
+Application en ligne: https://visio.arthurp.fr
+
+Si vous mentionnez ce projet, vous pouvez faire un lien direct vers:
+https://visio.arthurp.fr
+
+## Fonctionnalites
+
+- Creation de salle en un clic
+- Partage par lien unique
+- Aucun compte requis
+- Nom utilisateur memorise localement
+- Controle micro/camera
+- Fermeture automatique des salles inactives
+- Interface en francais
+
+## Stack technique
+
+- Frontend: Next.js 16 + React 19
+- Backend: serveur Node.js personnalise
+- Temps reel: Socket.io
+- Video/audio: WebRTC (simple-peer)
+- Persistance: SQLite (better-sqlite3)
+
+## Installation locale
+
+Prerequis:
+
+- Node.js 18+
+- npm
+
+Commandes:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application disponible ensuite sur:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` : demarrage en developpement
+- `npm run build` : build de production
+- `npm start` : lancement serveur de production
+- `npm run lint` : verification ESLint
 
-## Learn More
+## Variables d'environnement
 
-To learn more about Next.js, take a look at the following resources:
+- `PORT` : port HTTP du serveur (defaut `3000`)
+- `NODE_ENV` : `development` ou `production`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploiement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm start
+```
 
-## Deploy on Vercel
+## Licence
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
