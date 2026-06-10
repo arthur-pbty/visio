@@ -9,12 +9,19 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Build & restart containers
+      - name: Deploy on server
         run: |
+          set -e
+
+          echo "Go to app folder"
+          cd /opt/apps/visio
+
+          echo "⬇Pull latest code"
+          git pull origin main
+
+          echo "Build & restart containers"
           docker compose down || true
           docker compose build
           docker compose up -d
-          
+
+          echo "Deploy finished"
