@@ -1,0 +1,19 @@
+name: Deploy Docker
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build & restart containers
+        run: |
+          docker compose down || true
+          docker compose build
+          docker compose up -d
