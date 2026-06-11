@@ -186,7 +186,7 @@ export default function Home() {
       <footer className="bg-white border-t border-gray-200 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-gray-500 text-sm">
-            © 2026 Visio - visio.arthurp.fr - Visioconférence simple et gratuite
+            © 2026 Visio - visio.arthurp.fr - Visioconférence simple et gratuite by Arthur P. - <a href="https://arthurp.fr" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800">arthurp.fr</a>
           </p>
         </div>
       </footer>

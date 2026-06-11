@@ -16,7 +16,7 @@ jobs:
           echo "Go to app folder"
           cd /opt/apps/visio
 
-          echo "⬇Pull latest code"
+          echo "Pull latest code"
           git pull origin main
 
           echo "Build & restart containers"
